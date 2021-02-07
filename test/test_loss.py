@@ -12,8 +12,8 @@ def test_cdist():
     # WHEN we run compute the pairwise distance
     d = cdist(A, B)
     # THEN we expect the result to be a diagonal matrix with 0s along the right diagonal and sqrt(8) along the left
-    assert (d.__array__() == [[0.0, 2.8284270763397217],
-                              [2.8284270763397217, 0.0]]).all()
+    assert (np.array(d) == [[0.0, 2.8284270763397217],
+                            [2.8284270763397217, 0.0]]).all()
 
 
 def test_hausdorff_loss_match():
